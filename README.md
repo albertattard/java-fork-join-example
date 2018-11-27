@@ -167,7 +167,7 @@ To disable the logs for each file visited, simple change the log level to `INFO`
 
 ```
 log4j.rootCategory=warn, R
-log4j.logger.com.javacreed=<span class="highlight">info</span>, stdout
+log4j.logger.com.javacreed=info, stdout
 ```
 
 Please note that the logging will only make things slower.  In fact if you run the example without logs (or the logs set to `INFO`), the size of the directory is computed much faster.
