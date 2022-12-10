@@ -519,7 +519,7 @@ While the phrase multithreading is overused in the programming community, the ch
 
 ### RecursiveAction
 
-The Fork/Join Framework supports two types of tasks.  The second type of task is the `RecursiveAction`.  These types of tasks are not meant to return anything.  These are ideal for cases where you want to do an action, such as delete a file, without returning anything.  In general you cannot delete an empty directory.  First you need to delete all its files first.  In this case the `RecursiveAction` can be used where each action either deletes the file, or first deletes all directory content and then deletes the directory itself.
+The Fork/Join Framework supports two types of tasks.  The second type of task is the `RecursiveAction`.  These types of tasks are not meant to return anything.  These are ideal for cases where you want to do an action, such as delete a file, without returning anything.  In general you cannot delete a non-empty directory.  First you need to delete all its files first.  In this case the `RecursiveAction` can be used where each action either deletes the file, or first deletes all directory content and then deletes the directory itself.
 
 Following is the final example we have in this article.  It shows the modified version of the `DirSize`, which makes use of the `SizeOfFileAction` inner class to compute the size of the directory.
 
